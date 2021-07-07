@@ -23,4 +23,8 @@ So far, I've run `gem update rails` and then `rails new bragger`.
 rails new bragger
 cd bragger
 rails action_mailbox:install
+rails g scaffold User name email
+rails g scaffold Discussion title
+rails g scaffold Comment user:references discussion:references body:text
+rails db:migrate
 ```
