@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+I'm doing some engineering work around email (sending email from a Rails app, receiving email in a Rails app) and more.
 
-* Ruby version
+## Shapeup Iteration 1
 
-* System dependencies
+I like the [ShapeUp](https://basecamp.com/shapeup) product design philosophy. To that end, here's the v1 spec of this app:
 
-* Configuration
+1. A user can sign up for "bragger" (via Google and/or GitHub), and in doing so, they will receive a weekly email asking "what did you accomplish this week?"
+1. When they reply to the email, the contents will be saved to the current week of work
+1. They can then log into their account and view all past answers
+1. This service will charge a recurring fee or a one-time fee via Stripe
+1. This service will enable one-click unsubscribes
 
-* Database creation
+I'm going to include detailed notes as I go, and I'll be using Chris Oliver's [GoRails](https://gorails.com/) quite a bit.
 
-* Database initialization
+So far, I've run `gem update rails` and then `rails new bragger`.
 
-* How to run the test suite
+### [How to use Action Mailbox in Rails 6](https://gorails.com/episodes/action-mailbox-rails-6?autoplay=1)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rails new bragger
+cd bragger
+rails action_mailbox:install
+```
