@@ -27,4 +27,6 @@ rails g scaffold User name email
 rails g scaffold Discussion title
 rails g scaffold Comment user:references discussion:references body:text
 rails db:migrate
+
+rails g mailbox Replies
 ```
